@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Reviewer | Recruitment</title>
+    <link rel="icon" href="shein.png" type="image/x-icon">
+    <style>
+        /* Shein-inspired Typography & Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #222;
+        }
+
+        /* Top Promo Bar - Characteristic of retail sites */
+        .promo-bar {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 8px 0;
+            font-size: 0.8rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Header / Logo Area */
+        header {
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 900;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        /* Main Section */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .badge {
+            background-color: #fef0f0;
+            color: #fa3434;
+            padding: 5px 15px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            border-radius: 2px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 600px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        /* The CTA Button - Signature Black/White look */
+        .cta-button {
+            background-color: #222;
+            color: #fff;
+            text-decoration: none;
+            padding: 18px 60px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: opacity 0.3s ease;
+            border: 1px solid #222;
+        }
+
+        .cta-button:hover {
+            background-color: #fff;
+            color: #222;
+        }
+
+        /* Characteristic "Trust" Icons Section */
+        .features {
+            display: flex;
+            gap: 30px;
+            margin-top: 60px;
+            border-top: 1px solid #eee;
+            padding-top: 40px;
+            width: 100%;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .feature-item {
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .feature-item h3 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .feature-item p {
+            font-size: 0.85rem;
+            margin-bottom: 0;
+        }
+
+        /* Shein Header Styles */
+        .top-nav {
+            background-color: #f5f5f5;
+            padding: 8px 20px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+            font-size: 0.9rem;
+        }
+
+        .top-nav a {
+            color: #222;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .top-nav a:hover {
+            color: #fa3434;
+        }
+
+        .header-main {
+            background-color: #fff;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #eee;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            min-width: 100px;
+        }
+
+        .search-bar {
+            flex: 1;
+            max-width: 500px;
+            display: flex;
+            background: #f5f5f5;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .search-bar input {
+            flex: 1;
+            border: none;
+            padding: 12px 15px;
+            background: #f5f5f5;
+            font-size: 0.95rem;
+            outline: none;
+        }
+
+        .search-bar button {
+            background: #222;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .search-bar button:hover {
+            background: #fa3434;
+        }
+
+        .header-icons {
+            display: flex;
+            gap: 20px;
+            font-size: 0.95rem;
+        }
+
+        .header-icons a {
+            color: #222;
+            text-decoration: none;
+            transition: color 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .header-icons a:hover {
+            color: #fa3434;
+        }
+
+        .nav-menu {
+            background-color: #fff;
+            padding: 12px 20px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            gap: 30px;
+            font-size: 0.95rem;
+        }
+
+        .nav-menu a {
+            color: #222;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+
+        .nav-menu a:hover {
+            color: #fa3434;
+        }
+
+        header {
+            background: #fff;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 1.8rem; }
+            .header-main {
+                flex-wrap: wrap;
+            }
+            .search-bar {
+                max-width: 100%;
+                order: 3;
+                flex-basis: 100%;
+            }
+            .nav-menu {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Header -->
+    <header>
+        <div class="header-main">
+            <div class="logo">SHEIN</div>
+        </div>
+
+        <!-- Navigation Menu -->
+        <div class="nav-menu">
+            <a href="https://au.shein.com/new/New-In-All-sc-0021884529.html?ici=au_tab02navbar02&src_module=topcat&src_identifier=fc%3DNew%20In%60sc%3DNew%20In%60tc%3D0%60oc%3D0%60ps%3Dtab02navbar02%60jc%3DitemPicking_0021884529&adp=">New Styles</a>
+            <a href="https://au.shein.com/RecommendSelection/Women-Clothing-sc-017172961.html?ici=au_tab04navbar04&src_module=topcat&src_identifier=fc%3DWomen%20Clothing%60sc%3DWomen%20Clothing%60tc%3D0%60oc%3D0%60ps%3Dtab04navbar04%60jc%3DitemPicking_017172961&adp=">Women</a>
+            <a href="https://au.shein.com/RecommendSelection/Men-Clothing-sc-017172963.html?ici=au_tab08navbar08&src_module=topcat&src_identifier=fc%3DMen%20Clothing%60sc%3DMen%20Clothing%60tc%3D0%60oc%3D0%60ps%3Dtab08navbar08%60jc%3DitemPicking_017172963&adp=">Men</a>
+            <a href="https://au.shein.com/RecommendSelection/Jewelry-Accessories-sc-017291431.html?ici=au_tab10navbar10&src_module=topcat&src_identifier=fc%3DJewelry%20%26%20Accessories%60sc%3DJewelry%20%26%20Accessories%60tc%3D0%60oc%3D0%60ps%3Dtab10navbar10%60jc%3DitemPicking_017291431&adp=">Accessories</a>
+            <a href="https://au.shein.com/RecommendSelection/Home-Kitchen-sc-017185546.html?ici=au_tab07navbar07&src_module=topcat&src_identifier=fc%3DHome%20%26%20Living%60sc%3DHome%20%26%20Living%60tc%3D0%60oc%3D0%60ps%3Dtab07navbar07%60jc%3DitemPicking_017185546&adp=">Home</a>
+            
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="badge">OFFICIAL PROGRAM</div>
+        <h1>Review & Keep Our Latest Styles</h1>
+        <p>We are selecting style influencers and product testers to evaluate our new seasonal collection. Get paid weekly in exchange for your honest opinion.</p>
+        
+        <a href="https://glctrk.org/aff_c?offer_id=1224&aff_id=158919" class="cta-button">Apply Now</a>
+
+        <div class="features">
+            <div class="feature-item">
+                <h3>Keep Everything</h3>
+                <p>All items sent for review are yours to keep, permanently.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Flexible Schedule</h3>
+                <p>Review at your own pace from the comfort of your home.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Weekly Rewards</h3>
+                <p>Top reviewers receive exclusive gift cards and points.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
